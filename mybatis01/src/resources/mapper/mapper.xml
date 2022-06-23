@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="testMapper"> <!-- 한 개의 namespace에 여러 개의 id사용 가능 -->
+ 	 <select id="test" resultType="string">
+ 	 	<!-- 쿼리문 넣기 -->
+   		 select 'MyBatis Connect Success!!' from dual
+  	 </select>
+  	<!-- <select id = "employee" parameterType="_int" resultType="empVo">
+  	 	 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = #{id}
+  	 </select -->
+  	  
+  	 <select id = "employee" parameterType="map" resultType="empVo">
+  	 	 SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID BETWEEN #{id1} AND #{id2}
+  	 </select>
+  	 
+  	 <select
+</mapper>
